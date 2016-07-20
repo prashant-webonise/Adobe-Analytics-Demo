@@ -12,7 +12,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /**
+         * Initial configuration
+         */
         Config.setContext(this);
+
+        /**
+         * Sending the screen name as a state
+         */
         Analytics.trackState(MainActivity.class.getSimpleName(), null);
     }
 }
